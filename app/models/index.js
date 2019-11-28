@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const config = require('../../config/config')
 const db = {}
 
-const sequelize = new Sequelize(config.development)
+const sequelize = new Sequelize(config)
 
 fs.readdirSync(__dirname)
   .filter(
