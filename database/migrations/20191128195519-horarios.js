@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -21,6 +21,18 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
+      hora: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      minuto: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      tipo: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -29,10 +41,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    })
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Horarios')
+    return queryInterface.dropTable('horarios')
   }
-};
+}

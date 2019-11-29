@@ -1,12 +1,11 @@
 module.exports = {
   dialect: 'mysql',
   host: '127.0.0.1',
-  port: '3305',
+  port: '3306',
   username: 'root',
   password: '',
-  database: 'teste',
-  operatorAliases: false,
+  database: 'ponto',
   define: {
-    timestamps: true,
+    timestamps: true
   }
 }

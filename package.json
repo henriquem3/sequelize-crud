@@ -11,9 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "carbone": "^1.2.1",
     "express": "^4.17.1",
     "moment": "^2.24.0",
-    "mysql2": "^2.0.0",
+    "mysql2": "^2.0.1",
     "sequelize": "^5.21.2"
   },
   "devDependencies": {

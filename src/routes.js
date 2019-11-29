@@ -1,23 +1,14 @@
 const express = require('express')
-const moment = require('moment')
 
-const { Horario } = require('../app/models')
+const HorarioController = require('../app/controllers/HorarioController')
+const ImprimirController = require('../app/controllers/ImprimirController')
 
 const router = express.Router()
 
-router.get('/', async (req, res) => {
-  const horarios = await Horario.findAll()
-  return res.json({ horarios })
-})
+router.get('/', HorarioController.index)
+router.post('/', HorarioController.store)
+router.get('/horarios/:tipo', HorarioController.query)
 
-router.get('/entrada', async (req, res) => {
-  const date = moment()
-  const dia = date.date()
-  const mes = date.month() + 1
-  const ano = date.year()
-
-  const horario = await Horario.create({ dia, mes, ano })
-  return res.json(horario)
-})
+router.get('/imprimir/:mes', ImprimirController.query)
 
 module.exports = router
